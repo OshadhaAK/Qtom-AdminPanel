@@ -15,11 +15,16 @@ export class ProductsandservicesComponent implements OnInit {
   ID:any;
   success:any;
   delete:any;
+  image:any;
+  newName:any;
+  newDescription:any;
+  newImage:any;
   constructor(private router: Router) { 
     this.showAll = true;
     this.showForm = false;
     this.success = false;
     this.delete = false;
+  
     this.productsOrServices = [
       {ID: "01", Name : "Product 01",Description : "a"},
       {ID: "02", Name : "Product 02",Description : "b"},
@@ -48,5 +53,8 @@ export class ProductsandservicesComponent implements OnInit {
   }
   deleteItem(id:any){
     this.delete = true;
+  }
+  addNew(){
+    alert("Done");
   }
 }
