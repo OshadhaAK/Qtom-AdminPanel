@@ -9,6 +9,14 @@ import { NavComponent } from './nav/nav.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ProductsandservicesComponent } from './productsandservices/productsandservices.component';
+import { IndustriesComponent } from './industries/industries.component';
+
+import { ModaladdnewComponent } from './modaladdnew/modaladdnew.component';
+import { ModalremoveconfirmationComponent } from './modalremoveconfirmation/modalremoveconfirmation.component';
+import { ModalupdateformComponent } from './modalupdateform/modalupdateform.component';
+import { UpdateindustrymodalComponent } from './updateindustrymodal/updateindustrymodal.component';
+import { RemoveindustrymodalComponent } from './removeindustrymodal/removeindustrymodal.component';
+import { NewindustrymodalComponent } from './newindustrymodal/newindustrymodal.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +26,13 @@ import { ProductsandservicesComponent } from './productsandservices/productsands
     SidebarComponent,
     DashboardComponent,
     ProductsandservicesComponent,
+    IndustriesComponent,
+    ModaladdnewComponent,
+    ModalremoveconfirmationComponent,
+    ModalupdateformComponent,
+    UpdateindustrymodalComponent,
+    RemoveindustrymodalComponent,
+    NewindustrymodalComponent,
     
   ],
   imports: [

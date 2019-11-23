@@ -1,0 +1,37 @@
+<div class="modal fade" id="newModalCenter" tabindex="-1" role="dialog" aria-labelledby="newModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalCenterTitle">Add New</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+          <form>
+              
+              <div class="form-group">
+                <label for="Name">Name</label>
+                <textarea class="form-control" name="Name" id="Name" [(ngModel)] = 'newName' ></textarea>
+              </div>
+              <div class="form-group">
+                      <label for="Description">Description</label>
+                      <textarea class="form-control" name="Description" id="Description" rows="3" [(ngModel)] = 'newDescription'></textarea>
+              </div>
+              <div class="custom-file">
+                <label class="custom-file-label" for="customFile">Choose Image</label>
+                  <input type="file" class="custom-file-input" id="customFile" name="Image" [(ngModel)] = "newImage">
+                  
+                </div>
+          </form>
+      </div>
+      <div *ngIf="success" class="alert alert-primary" role="alert">
+          Successfully Saved!
+        </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal"><i class="fa fa-times-circle"></i>   Close</button>
+        <button (click)="save(ID)" type="button" class="btn btn-primary"><i class="fa fa-save"></i>  Save</button>
+      </div>
+    </div>
+  </div>
+</div>

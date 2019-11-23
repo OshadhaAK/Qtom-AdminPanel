@@ -20,120 +20,13 @@
               <h2 class="card-title">{{productOrService.Name}}</h2>
               <p class="card-text">{{productOrService.Description}}</p>
               <button (click)="update(i)" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" (click)="success=false"><i class="fa fa-pencil" aria-hidden="true"></i>   Update</button>
-              <button (click)="remove(i)" class="btn btn-danger" data-toggle="modal" data-target="#removeModalCenter" style="float: right;" (click)="delete=false"><i class="fa fa-trash" aria-hidden="true"></i>   Remove</button>
+              <button (click)="remove(i)" class="btn btn-danger" data-toggle="modal" data-target="#removeModalCenter" style="float: right;"><i class="fa fa-trash" aria-hidden="true"></i>   Remove</button>
             </div>
           </div>
         </div>
         
     <!-- /.row -->
-</div>
-
-<!-- -->
-<div class="modal fade" id="newModalCenter" tabindex="-1" role="dialog" aria-labelledby="newModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalCenterTitle">Add New</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-            <form>
-                
-                <div class="form-group">
-                  <label for="Name">Name</label>
-                  <textarea class="form-control" name="Name" id="Name" [(ngModel)] = 'newName' ></textarea>
-                </div>
-                <div class="form-group">
-                        <label for="Description">Description</label>
-                        <textarea class="form-control" name="Description" id="Description" rows="3" [(ngModel)] = 'newDescription'></textarea>
-                </div>
-                <div class="custom-file">
-                  <label class="custom-file-label" for="customFile">Choose Image</label>
-                    <input type="file" class="custom-file-input" id="customFile" name="Image" [(ngModel)] = "newImage">
-                    
-                  </div>
-            </form>
-        </div>
-        <div *ngIf="success" class="alert alert-primary" role="alert">
-            Successfully Saved!
-          </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal"><i class="fa fa-times-circle"></i>   Close</button>
-          <button (click)="save(ID)" type="button" class="btn btn-primary"><i class="fa fa-save"></i>  Save</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-<!-- Button trigger modal -->
-
-  
-  <!-- Modal -->
-  <div class="modal fade" id="removeModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalCenterTitle">Remove Item</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          Do you want to delete?
-          <div class="form-group" hidden>
-              <label for="ID">ID</label>
-              <textarea class="form-control" name="ID" id="ID" [(ngModel)] = 'ID' value="{{ID}}"></textarea>
-            </div>
-        </div>
-        <div *ngIf="delete" class="alert alert-danger" role="alert">
-            Successfully Deleted!{{ID}}
-          </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal" ><i class="fa fa-times-circle"></i>   Close</button>
-          <button type="button" class="btn btn-danger" (click)="deleteItem(ID)"><i class="fa fa-trash" aria-hidden="true"></i>  Remove</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Modal -->
-  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalCenterTitle">Update Content</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-            <form>
-                <div class="form-group" hidden>
-                    <label for="ID">ID</label>
-                    <textarea class="form-control" name="ID" id="ID" [(ngModel)] = 'ID' ></textarea>
-                  </div>
-                <div class="form-group">
-                  <label for="Name">Name</label>
-                  <textarea class="form-control" name="Name" id="Name" [(ngModel)] = 'Name'></textarea>
-                </div>
-                <div class="form-group">
-                        <label for="Description">Description</label>
-                        <textarea class="form-control" name="Description" id="Description" rows="3" [(ngModel)] = 'Description'></textarea>
-                </div>
-                <div class="custom-file">
-                    <input type="file" class="custom-file-input" id="customFile" name="Image" [(ngModel)] = "Image">
-                    <label class="custom-file-label" for="customFile">Choose Image</label>
-                  </div>
-            </form>
-        </div>
-        <div *ngIf="success" class="alert alert-primary" role="alert">
-            Successfully Saved!{{ID}}
-          </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal"><i class="fa fa-times-circle"></i>   Close</button>
-          <button (click)="save(ID)" type="button" class="btn btn-primary"><i class="fa fa-save"></i>  Save changes</button>
-        </div>
-      </div>
-    </div>
-  </div>
+</div> 
+<app-modalremoveconfirmation [ID]="ID"></app-modalremoveconfirmation>
+<app-modalupdateform [Name]="Name" [ID]="ID" [Description]="Description"></app-modalupdateform>
+<app-modaladdnew></app-modaladdnew>

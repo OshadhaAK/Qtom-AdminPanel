@@ -55,6 +55,6 @@ export class ProductsandservicesComponent implements OnInit {
     this.delete = true;
   }
   addNew(){
-    alert("Done");
+    
   }
 }
