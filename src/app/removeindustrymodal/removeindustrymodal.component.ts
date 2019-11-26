@@ -7,9 +7,14 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class RemoveindustrymodalComponent implements OnInit {
   @Input() public ID;
-  constructor() { }
+  constructor() {
+    console.log(this.ID)
+   }
 
   ngOnInit() {
   }
 
+  deleteItem(id:any){
+    alert("deleted : "+this.ID);
+  }
 }

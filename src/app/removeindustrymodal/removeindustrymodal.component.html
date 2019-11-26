@@ -8,10 +8,10 @@
         </button>
       </div>
       <div class="modal-body">
-        Do you want to delete?
+        Do you want to delete?{{ID}}
         <div class="form-group" hidden>
             <label for="ID">ID</label>
-            <textarea class="form-control" name="ID" id="ID" [(ngModel)] = 'ID' value="{{ID}}"></textarea>
+            <textarea class="form-control" name="ID" id="ID"></textarea>
           </div>
       </div>
       <div *ngIf="delete" class="alert alert-danger" role="alert">

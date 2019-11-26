@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
@@ -17,6 +17,8 @@ import { ModalupdateformComponent } from './modalupdateform/modalupdateform.comp
 import { UpdateindustrymodalComponent } from './updateindustrymodal/updateindustrymodal.component';
 import { RemoveindustrymodalComponent } from './removeindustrymodal/removeindustrymodal.component';
 import { NewindustrymodalComponent } from './newindustrymodal/newindustrymodal.component';
+import { from } from 'rxjs';
+import { GalleryComponent } from './gallery/gallery.component';
 
 @NgModule({
   declarations: [
@@ -33,12 +35,14 @@ import { NewindustrymodalComponent } from './newindustrymodal/newindustrymodal.c
     UpdateindustrymodalComponent,
     RemoveindustrymodalComponent,
     NewindustrymodalComponent,
+    GalleryComponent,
     
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

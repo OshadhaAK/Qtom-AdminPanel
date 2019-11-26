@@ -17,8 +17,8 @@
       <div class="col-sm-6" style="margin-bottom: 2%" *ngFor="let industry of industries; let i = index">
         <div class="card">
           <div class="card-body">
-            <h2 class="card-title">{{industry.Name}}</h2>
-            <p class="card-text">{{industry.Description}}</p>
+            <h2 class="card-title">{{industry.name}}</h2>
+            <p class="card-text">{{industry.description}}</p>
             <button (click)="update(i)" class="btn btn-primary" data-toggle="modal" data-target="#updateModalCenter" (click)="success=false"><i class="fa fa-pencil" aria-hidden="true"></i>   Update</button>
               <button (click)="remove(i)" class="btn btn-danger" data-toggle="modal" data-target="#removeModal" style="float: right;"><i class="fa fa-trash" aria-hidden="true"></i>   Remove</button>
           </div>
