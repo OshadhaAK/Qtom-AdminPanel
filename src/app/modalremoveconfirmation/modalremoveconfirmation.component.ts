@@ -10,8 +10,9 @@ export class ModalremoveconfirmationComponent implements OnInit {
 
   @Input() public ID;
   delete: any;
+  
   constructor(private cd:ChangeDetectorRef) {
-    this.delete = false;
+    
    }
 
   ngOnInit() {
@@ -19,5 +20,10 @@ export class ModalremoveconfirmationComponent implements OnInit {
 
   deleteItem(id:any){
     this.delete = true;
+    
+    setTimeout(() => {
+      this.delete = false;
+    },1);
+    
   }
 }

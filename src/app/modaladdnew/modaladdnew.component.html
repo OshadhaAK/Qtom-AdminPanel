@@ -25,12 +25,12 @@
                 </div>
           </form>
       </div>
-      <div *ngIf="success" class="alert alert-primary" role="alert">
+      <div *ngIf="successmsg" class="alert alert-primary" role="alert">
           Successfully Saved!
         </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal"><i class="fa fa-times-circle"></i>   Close</button>
-        <button (click)="save(ID)" type="button" class="btn btn-primary"><i class="fa fa-save"></i>  Save</button>
+        <button type="button" class="btn btn-primary" (click)="save()"><i class="fa fa-save"></i>  Save</button>
       </div>
     </div>
   </div>

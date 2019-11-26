@@ -13,8 +13,6 @@ export class ProductsandservicesComponent implements OnInit {
   Name:any;
   Description:any;
   ID:any;
-  success:any;
-  delete:any;
   image:any;
   newName:any;
   newDescription:any;
@@ -22,8 +20,8 @@ export class ProductsandservicesComponent implements OnInit {
   constructor(private router: Router) { 
     this.showAll = true;
     this.showForm = false;
-    this.success = false;
-    this.delete = false;
+    
+    
   
     this.productsOrServices = [
       {ID: "01", Name : "Product 01",Description : "a"},
@@ -47,14 +45,5 @@ export class ProductsandservicesComponent implements OnInit {
     
   }
 
-  save(id:any){
-    this.success = true;
-
-  }
-  deleteItem(id:any){
-    this.delete = true;
-  }
-  addNew(){
-    
-  }
+ 
 }
