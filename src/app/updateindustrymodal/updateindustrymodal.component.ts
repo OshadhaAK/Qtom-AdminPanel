@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { IndustryService } from '../services/industry.service';
 
 @Component({
   selector: 'app-updateindustrymodal',
@@ -6,12 +7,28 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./updateindustrymodal.component.sass']
 })
 export class UpdateindustrymodalComponent implements OnInit {
-  @Input() public Name;
+  
   @Input() public ID;
+  @Input() public Name;
   @Input() public Description;
-  constructor() { }
 
-  ngOnInit() {
+  name: any;
+  description: any;
+  constructor(private industryService: IndustryService) { 
+    
   }
 
+  ngOnInit() {
+    this.name = this.Name;
+    this.description = this.Description;
+  }
+
+  save(id:any){
+    this.industryService.updateIndustry(this.ID,this.name,this.description).subscribe((data:any)=>{
+        //console.log("sent "+data)
+    });
+    //console.log("sent")
+  }
+
+  
 }

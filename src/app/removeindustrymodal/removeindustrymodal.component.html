@@ -18,7 +18,7 @@
           Successfully Deleted!{{ID}}
         </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal" ><i class="fa fa-times-circle"></i>   Close</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="reload()" ><i class="fa fa-times-circle"></i>   Close</button>
         <button type="button" class="btn btn-danger" (click)="deleteItem(ID)"><i class="fa fa-trash" aria-hidden="true"></i>  Remove</button>
       </div>
     </div>

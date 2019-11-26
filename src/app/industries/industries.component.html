@@ -4,7 +4,7 @@
       <div class="col-sm-10 col-md-10 well" id="content">
           <h2>Industries</h2>
       </div>
-      <button (click)="addNew()" class="btn btn-primary" data-toggle="modal" data-target="#newModal" (click)="success=false; delete=false;"><i class="fa fa-plus" aria-hidden="true"></i>   Add New</button>
+      <button class="btn btn-primary" data-toggle="modal" data-target="#newModal" (click)="success=false; delete=false;"><i class="fa fa-plus" aria-hidden="true"></i>   Add New</button>
   </div>
   <!-- /.row -->
 </div>
@@ -29,5 +29,5 @@
 </div>
 
 <app-removeindustrymodal [ID]="ID"></app-removeindustrymodal>
-<app-updateindustrymodal [Name]="Name" [ID]="ID" [Description]="Description"></app-updateindustrymodal>
+<app-updateindustrymodal [ID]="ID" [Name]="Name" [Description]="Description"></app-updateindustrymodal>
 <app-newindustrymodal></app-newindustrymodal>

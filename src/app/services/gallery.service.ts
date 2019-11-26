@@ -15,4 +15,8 @@ export class GalleryService {
    getGallery():Observable<IGallery[]>{
      return this.http.get<IGallery[]>(`${this.url}`);
    }
+
+   getImg(id){
+    return this.http.get(`${this.url}`+ id);
+   }
 }

@@ -35,8 +35,8 @@ export class IndustriesComponent implements OnInit {
    }
 
   ngOnInit() {
-    this.industryService.getIndustry().subscribe((data:any) =>{
-      console.log("ind",data);
+    this.industryService.getIndustries().subscribe((data:any) =>{
+      //console.log("ind",data);
       this.industries=data; 
     },(error:any) => {
       console.log(error);
@@ -64,8 +64,8 @@ export class IndustriesComponent implements OnInit {
   // deleteItem(id:any){
   //   this.delete = true;
   // }
-  addNew(){
-    alert("Done");
-  }
+  // addNew(){
+  //   alert("Done");
+  // }
 
 }

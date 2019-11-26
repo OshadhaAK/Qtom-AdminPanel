@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { IndustryService } from '../services/industry.service';
 
 @Component({
   selector: 'app-removeindustrymodal',
@@ -7,8 +8,9 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class RemoveindustrymodalComponent implements OnInit {
   @Input() public ID;
-  constructor() {
-    console.log(this.ID)
+  industries:any;
+  constructor(private industryService: IndustryService) {
+    // console.log(this.ID)
    }
 
   ngOnInit() {
@@ -16,5 +18,16 @@ export class RemoveindustrymodalComponent implements OnInit {
 
   deleteItem(id:any){
     alert("deleted : "+this.ID);
+    this.industryService.deleteIndustry(this.ID).subscribe((data:any)=>{
+      //console.log("deleted")
+    });
+  }
+  reload(){
+    this.industryService.getIndustries().subscribe((data:any) =>{
+      //console.log("ind",data);
+      this.industries=data; 
+    },(error:any) => {
+      console.log(error);
+    });
   }
 }

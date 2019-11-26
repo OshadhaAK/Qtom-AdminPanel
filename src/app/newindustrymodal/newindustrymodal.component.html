@@ -9,18 +9,17 @@
       </div>
       <div class="modal-body">
           <form>
-              
               <div class="form-group">
-                <label for="Name">Name</label>
-                <textarea class="form-control" name="Name" id="Name" [(ngModel)] = 'newName' ></textarea>
-              </div>
+                  <label for="Description">Name</label>
+                  <textarea class="form-control" name="name" id="name" rows="3" [(ngModel)] = 'name'></textarea>
+          </div>
               <div class="form-group">
                       <label for="Description">Description</label>
-                      <textarea class="form-control" name="Description" id="Description" rows="3" [(ngModel)] = 'newDescription'></textarea>
+                      <textarea class="form-control" name="description" id="description" rows="3" [(ngModel)] = 'description'></textarea>
               </div>
               <div class="custom-file">
                 <label class="custom-file-label" for="customFile">Choose Image</label>
-                  <input type="file" class="custom-file-input" id="customFile" name="Image" [(ngModel)] = "newImage">
+                  <input type="file" class="custom-file-input" id="customFile" name="Image" >
                   
                 </div>
           </form>
@@ -30,7 +29,7 @@
         </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal"><i class="fa fa-times-circle"></i>   Close</button>
-        <button (click)="save(ID)" type="button" class="btn btn-primary"><i class="fa fa-save"></i>  Save</button>
+        <button (click)="save()" type="button" class="btn btn-primary"><i class="fa fa-save"></i>  Save</button>
       </div>
     </div>
   </div>
